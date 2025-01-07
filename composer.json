@@ -6,10 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "blade-ui-kit/blade-heroicons": "^2.5",
         "eightynine/filament-excel-import": "^3.1",
-        "filament/filament": "^3.2.77",
+        "filament/filament": "*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "livewire/livewire": "*",
         "maatwebsite/excel": "^3.1",
         "psr/simple-cache": "^2.0"
     },

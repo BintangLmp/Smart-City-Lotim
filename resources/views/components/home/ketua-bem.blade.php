@@ -1,5 +1,5 @@
 {{-- Ketua BEM --}}
-<div class="lg:h-[65vh] lg:flex container mx-auto gap-10 lg:px-0 px-4 items-center my-20 flex-row-reverse">
+{{-- <div class="lg:h-[65vh] lg:flex container mx-auto gap-10 lg:px-0 px-4 items-center my-20 flex-row-reverse">
     <div id="dekan-image"
         class="rounded-tr-[100px] rounded-tl-xl rounded-br-xl rounded-bl-[100px] lg:h-full lg:aspect-auto aspect-square lg:w-5/12 2xl:w-1/2 overflow-hidden">
         <img src="{{ asset('img/Widarman.JPG') }}"
@@ -23,4 +23,4 @@
             </p>
         </div>
     </div>
-</div>
+</div> --}}

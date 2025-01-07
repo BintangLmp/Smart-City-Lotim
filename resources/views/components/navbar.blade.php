@@ -1,58 +1,43 @@
 @php
-    $menus = collect([
-        [
-            'label' => 'Beranda',
-            'route' => 'home',
-        ],
+    $menus = [
+        ['label' => 'Beranda', 'route' => 'home'],
         [
             'label' => 'Profil',
             'route' => 'about',
             'children' => [
-                [
-                    'label' => 'Tentang Kami ',
-                    'section' => '#latar-belakang',
-                ],
-                [
-                    'label' => 'Visi & Misi',
-                    'section' => '#visi-misi',
-                ],
-                [
-                    'label' => 'Struktural',
-                    'section' => '#struktural',
-                ],
-                [
-                    'label' => 'Program Studi',
-                    'section' => '#program-studi',
-                ],
+                ['label' => 'Visi & Misi', 'route' => 'about.visi-misi'],
+                ['label' => 'Struktural', 'route' => 'about.structural'],
             ],
         ],
         [
-            'label' => 'Aspirasi',
-            'route' => 'aspirasi',
+            'label' => 'Dimensi',
+            'route' => 'dimensi.index',
+            'children' => \App\Models\Dimensi::all()->map(function ($dimensi) {
+                return [
+                    'label' => $dimensi->nama,
+                    'route' => 'dimensi.show',
+                    'parameters' => ['slug' => $dimensi->slug],
+                ];
+            })->toArray(),
         ],
-        [
-            'label' => 'Artikel & Berita',
-            'route' => 'artikel.index',
-        ],
-        [
-            'label' => 'Jurnal',
-            'route' => 'jurnal',
-        ],
-    ]);
+        ['label' => 'Artikel & Berita', 'route' => 'artikel.index'],
+        ['label' => 'Destinasi Wisata', 'route' => 'destinasi.index'],
+        ['label' => 'Galeri', 'route' => 'galeri'],
+    ];
 @endphp
 
-<nav class="bg-white/90 backdrop-blur dark:bg-gray-900 fixed w-screen z-50 ">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<nav class="fixed z-50 w-screen bg-white/90 backdrop-blur dark:bg-gray-900">
+    <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <x-logo></x-logo>
         <x-search></x-search>
-        <di class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto" id="navbar-search">
             <x-search-mobile></x-search-mobile>
             <ul id="navbar-links"
-                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:dark:bg-gray-900">
                 @foreach ($menus as $menu)
                     <x-nav-link :link="$menu"></x-nav-link>
                 @endforeach
             </ul>
-        </di>
+        </div>
     </div>
 </nav>

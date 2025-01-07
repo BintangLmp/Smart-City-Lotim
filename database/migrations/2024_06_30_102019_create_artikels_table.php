@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('konten');
             $table->boolean('is_published')->default(false);
-            $table->string('gambar')->nullable();
+            $table->binary('gambar')->nullable();
             $table->date('published_at')->nullable();
             // $table->json('categroies');
             $table->timestamps();

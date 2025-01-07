@@ -1,5 +1,3 @@
-# Website BEM FRS
-
 #### Previews
 ![Beranda](./previews/beranda.png)
 
@@ -19,13 +17,19 @@
    $ composer install
    ```
 3. Copy file ``.env.example`` dan paste lalu rename jadi ``.env``
-4. Buat database pada phpmyadmin anda dengan nama ``bem_frs``
+4. Buat database pada phpmyadmin anda dengan nama ``db_smartcity``
 5. Lakukan Migrasi (tahap 1) :
     ```
     $ php artisan migrate --seed
     ```
+6. Lakukan penginstalan NPM 
+    ```
+    $ npm install
+    ```
 9. Jalankan server aplikasi :
     ```
     $ php artisan serve
+
+    $npm run dev
     ```
 10. Login menggunakan kredensial yang sudah dibuat. (Lihat di file DatabaseSeeder.php)

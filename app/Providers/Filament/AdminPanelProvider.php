@@ -26,9 +26,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            // ->brandLogo(asset('/img/uts.png'))
-            // ->brandLogo('BEM-FRS')
-            ->brandName('BEM-FRS')
+            ->brandLogo(asset('/img/logo.png'))
+            // ->brandLogo('Smart City')
+            ->brandName('SMART-CITY LOMBOK TIMUR')
             ->login()
             ->colors([
                 'primary' => Color::Blue,
