@@ -1,8 +1,8 @@
 #### Previews
 ![Beranda](./previews/beranda.png)
 
-![Beranda](./previews/aspirasi.png)
-- Branch Dev : Untuk Development
+![Beranda](./previews/Smart-Governance.png.png)
+
 
 ### Requirement
 1. Web server (Apache, Nginx dll), Mysql. Pakai Xampp / Laragon udah sepaket
