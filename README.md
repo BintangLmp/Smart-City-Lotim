@@ -1,7 +1,7 @@
 #### Previews
 ![Beranda](./previews/beranda.png)
 
-![Beranda](./previews/Smart-Governance.png.png)
+![Beranda](./previews/Smart-Governance.png)
 
 
 ### Requirement
